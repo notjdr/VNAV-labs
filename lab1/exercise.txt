@@ -1,0 +1,4 @@
+dante.txt 
+not blank line count: 19567  
+word count: 97676 
+line count: 557042

@@ -8,7 +8,7 @@ using namespace std;
 RandomVector::RandomVector(int size, double max_val) { 
   /// *** START YOUR CODE *** ///
 
-  /// *** END YOUR CODE ** //  
+  /// *** END YOUR CODE ** //
 }
 
 void RandomVector::print(){

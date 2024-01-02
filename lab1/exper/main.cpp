@@ -6,7 +6,9 @@
 int main()
 {
     std::srand(314159);
-    // std::cout << "Thanks for viewing my code!";
+    std::cout << "Thanks for viewing my code!";
+    // std::cout << "HI";
+
 
     RandomVector rv(20);
     rv.print();

@@ -87,60 +87,75 @@ using namespace std; //now we don't need to write 'std::' anymore.
 
 /// --- --- --- /// --- --- --- /// --- --- ---  /// --- --- ---  /// --- --- ---   
 
-// // create a vector containing integers
-// #include <vector>
+// create a vector containing integers
+#include <iomanip>
+#include <iostream>
+#include <vector>
+#include <cstdlib> 
 
-// int main() {
-// std::vector<int> vec;
+using std::setprecision;
 
-// // fill vec with random number in [0, 99]
-// for (auto i = 1; i <= 5; ++i){
-//   vec.push_back(rand() % 100);
-// }
 
-// // // display all elemenets of vec 
-// // for(int i = 1; i < vec.size(); ++i){
-// //   std::cout << vec.at(i) << " ";}
-// // std:cout << endl;
-// // }
 
-// // size of the vec
-// cout << "vector size: " << vec.size() << endl;
+int main() {
 
-// cout << "element: ";
-// for (auto &elem: vec){
-//     std::cout << elem << " ";
-// }
-// cout << endl;
+  // initialize constant seed
+  std::srand(99);
 
-// }
+  // create a vector containing integers
+  std::vector<double> vec;
+  
+  setprecision(10);
+  // srand( (unsigned)time (NULL) );
+
+  // fill vec with random number in [0, 99]
+  for (auto i = 0; i < 5; i++){
+    vec.push_back((double) rand()/RAND_MAX);
+  }
+
+  // display all elemenets of vec 
+  for(int i = 1; i < vec.size(); ++i){
+    std::cout << vec.at(i) << " ";
+    std::cout << endl;
+  }
+
+  // size of the vec
+  cout << "vector size: " << vec.size() << endl;
+
+  cout << "element: ";
+  for (auto &elem: vec){
+      std::cout << elem << " ";
+  }
+  cout << endl;
+
+}
 
 /// --- --- --- /// --- --- --- /// --- --- ---  /// --- --- ---  /// --- --- ---   
 
-#include <cmath> // required for pow and M_PI
-#include <iostream>
+// #include <cmath> // required for pow and M_PI
+// #include <iostream>
 
-class Circle{
-    double radius;
+// class Circle{
+//     double radius;
     
-    /// ***BEGIN*** /// 
-    public:
-        Circle(double rad) {
-            radius = rad;
-        }
-    /// ***END*** /// 
+//     /// ***BEGIN*** /// 
+//     public:
+//         Circle(double rad) {
+//             radius = rad;
+//         }
+//     /// ***END*** /// 
 
-    double circumference(){
-        return 2*M_PI*radius;
-    }
+//     double circumference(){
+//         return 2*M_PI*radius;
+//     }
 
-};
+// };
 
-int main(){
-  Circle circ(3);
-  std::cout << "Circumference: " << circ.circumference() << std::endl;
-//   std::cout << "Area: " << circ.area() << std::endl;
-  return 0;
-}
+// int main(){
+//   Circle circ(3);
+//   std::cout << "Circumference: " << circ.circumference() << std::endl;
+// //   std::cout << "Area: " << circ.area() << std::endl;
+//   return 0;
+// }
 
 /// --- --- --- /// --- --- --- /// --- --- ---  /// --- --- ---  /// --- --- ---   
